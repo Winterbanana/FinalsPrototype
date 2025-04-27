@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Animate On Scroll Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+  <!-- HEADER -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="home.html">
+        <img src="./icons/cokeicon.png" alt="Logo" width="50" height="50" class="me-2">
+        Coca-Cola
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="home.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html"><i class="bi bi-bag-fill me-1"></i> Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><i class="bi bi-info-circle-fill me-1"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="investors.html"><i class="bi bi-cash-coin me-1"></i> Investors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="brands.html"><i class="bi bi-stack me-1"></i> Brands</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="media.html"><i class="bi bi-camera-video me-1"></i> Media Center</a>
+          </li>
+          <li class="nav-item">
+            <button id="toggleMode" class="btn btn-outline-light ms-3"><i class="bi bi-moon-stars-fill me-1"></i> Dark Mode</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-light ms-3" onclick="logoutToast()"><i class="bi bi-box-arrow-right me-1"></i> Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ABOUT US SECTION -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container text-center" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p class="lead">Coca-Cola is one of the most iconic beverage companies in the world. Since its founding in 1886, it has grown into a global leader in the beverage industry. Coca-Cola's products include a wide range of beverages, including sodas, juices, teas, and more, all of which have gained significant market presence across the globe.</p>
+      <p>Coca-Cola's reach spans every continent, and its mission remains the same: to refresh the world and make a difference in the communities where it operates. With a diverse portfolio of brands and a commitment to sustainability, Coca-Cola continues to evolve and meet the changing tastes and preferences of its customers worldwide.</p>
+    </div>
+  </section>
+
+  <!-- INVESTORS SECTION -->
+  <section id="investors" class="py-5 bg-white">
+    <div class="container text-center" data-aos="fade-up">
+      <h2>Investors</h2>
+      <p class="lead">Coca-Cola’s financial growth and performance are key drivers of its global success. As a publicly traded company, Coca-Cola is committed to providing transparency and value to its investors.</p>
+      <p>Explore our financial reports, annual earnings, and investment opportunities to discover why Coca-Cola remains one of the most trusted and successful companies in the world.</p>
+    </div>
+  </section>
+
+  <!-- BRANDS SECTION -->
+  <section id="brands" class="py-5 bg-light">
+    <div class="container text-center" data-aos="fade-up">
+      <h2>Our Brands</h2>
+      <p class="lead">Coca-Cola is home to a wide array of beloved brands that span across multiple beverage categories. From its flagship Coca-Cola to sparkling waters, fruit juices, and energy drinks, Coca-Cola has something for every consumer.</p>
+      <p>Explore our brands that have touched the lives of millions around the world.</p>
+    </div>
+  </section>
+
+  <!-- MEDIA CENTER SECTION -->
+  <section id="media" class="py-5 bg-white">
+    <div class="container text-center" data-aos="fade-up">
+      <h2>Media Center</h2>
+      <p class="lead">Stay up to date with the latest news, press releases, and media coverage on Coca-Cola’s initiatives, products, and innovations.</p>
+      <p>Our media center offers resources for journalists, media inquiries, and updates about Coca-Cola’s social impact efforts, sustainability programs, and marketing campaigns.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-danger text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Coca-Cola Company.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    AOS.init();
+
+    // Dark/Light Mode Switch
+    const toggleBtn = document.getElementById('toggleMode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('bg-dark');
+      document.body.classList.toggle('text-white');
+      if(document.body.classList.contains('bg-dark')) {
+        toggleBtn.innerHTML = '<i class="bi bi-sun-fill me-1"></i> Light Mode';
+      } else {
+        toggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill me-1"></i> Dark Mode';
+      }
+    });
+
+    // Logout Toast and Redirect
+    function logoutToast() {
+      const toast = document.createElement('div');
+      toast.className = 'toast align-items-center text-white bg-success border-0 position-fixed top-0 end-0 m-3';
+      toast.role = 'alert';
+      toast.style.zIndex = '9999'; 
+      toast.innerHTML = `
+        <div class="d-flex">
+          <div class="toast-body">
+            Successfully logged out! Redirecting...
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      `;
+      document.body.appendChild(toast);
+
+      const bsToast = new bootstrap.Toast(toast, { delay: 2000 });
+      bsToast.show();
+
+      // After 2 seconds, redirect to login.html
+      setTimeout(() => {
+        window.location.href = 'index.html'; // <-- put your login page here
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

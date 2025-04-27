@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacts</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="./icons/cokeicon.png" alt="Logo" width="50" height="50" class="me-2">
+                Coca-Cola
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html"><i class="bi bi-bag-fill me-1"></i> Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="media.html"><i class="bi bi-newspaper me-1"></i> Media Center</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html"><i class="bi bi-telephone-fill me-1"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="toggleMode" class="btn btn-outline-light ms-3"><i class="bi bi-moon-stars-fill me-1"></i> Dark Mode</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-light ms-3" onclick="logoutToast()"><i class="bi bi-box-arrow-right me-1"></i> Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Contact Coca-Cola</h2>
+
+            <div class="row">
+                <!-- Contact Info Section -->
+                <div class="col-lg-6 mb-4" data-aos="zoom-in">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to us using the details below:</p>
+                    <ul class="list-unstyled">
+                        <li><strong>Address:</strong> 1 Coca-Cola Plaza, Atlanta, GA 30313, USA</li>
+                        <li><strong>Phone:</strong> +1 (800) 438-2653</li>
+                        <li><strong>Email:</strong> <a href="mailto:contact@coca-cola.com">contact@coca-cola.com</a></li>
+                    </ul>
+                    <p>For customer support, please visit our <a href="https://www.coca-cola.com/contact-us">Customer Support Page</a>.</p>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="col-lg-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Follow Us on Social Media</h3>
+                    <p>Stay updated with Coca-Cola’s latest news and promotions on our social media channels.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="me-3">
+                            <a href="https://www.instagram.com/cocacola" target="_blank" class="text-danger">
+                                <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+                            </a>
+                        </li>
+                        <li class="me-3">
+                            <a href="https://twitter.com/coca_colacompany" target="_blank" class="text-danger">
+                                <i class="bi bi-twitter" style="font-size: 2rem;"></i>
+                            </a>
+                        </li>
+                        <li class="me-3">
+                            <a href="https://www.facebook.com/coca-cola" target="_blank" class="text-danger">
+                                <i class="bi bi-facebook" style="font-size: 2rem;"></i>
+                            </a>
+                        </li>
+                        <li class="me-3">
+                            <a href="https://www.linkedin.com/company/coca-cola" target="_blank" class="text-danger">
+                                <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="row">
+                <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="200">
+                    <h3>Contact Us</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map Section -->
+            <div class="row mt-5">
+                <div class="col-12" data-aos="zoom-in" data-aos-delay="300">
+                    <h3>Our Location</h3>
+                    <p>Find our headquarters in Atlanta, Georgia.</p>
+                    <iframe class="w-100" height="400" src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Coca-Cola+Headquarters,Atlanta,GA" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-danger text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Coca-Cola Company.</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        AOS.init();
+
+        // Dark/Light Mode Switch
+        const toggleBtn = document.getElementById('toggleMode');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('bg-dark');
+            document.body.classList.toggle('text-white');
+            if (document.body.classList.contains('bg-dark')) {
+                toggleBtn.innerHTML = '<i class="bi bi-sun-fill me-1"></i> Light Mode';
+            } else {
+                toggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill me-1"></i> Dark Mode';
+            }
+        });
+
+        // Logout Toast and Redirect
+        function logoutToast() {
+            const toast = document.createElement('div');
+            toast.className = 'toast align-items-center text-white bg-success border-0 position-fixed top-0 end-0 m-3';
+            toast.role = 'alert';
+            toast.style.zIndex = '9999';
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Successfully logged out! Redirecting...
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            `;
+            document.body.appendChild(toast);
+
+            const bsToast = new bootstrap.Toast(toast, { delay: 2000 });
+            bsToast.show();
+
+            // After 2 seconds, redirect to login.html
+            setTimeout(() => {
+                window.location.href = 'index.html'; // <-- put your login page here
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

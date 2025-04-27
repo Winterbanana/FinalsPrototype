@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Center</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="./icons/cokeicon.png" alt="Logo" width="50" height="50" class="me-2">
+                Coca-Cola
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html"><i class="bi bi-bag-fill me-1"></i> Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="media.html"><i class="bi bi-newspaper me-1"></i> Media Center</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="bi bi-telephone-fill me-1"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="toggleMode" class="btn btn-outline-light ms-3"><i class="bi bi-moon-stars-fill me-1"></i> Dark Mode</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-light ms-3" onclick="logoutToast()"><i class="bi bi-box-arrow-right me-1"></i> Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="media-center" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Coca-Cola Media Center</h2>
+
+            <!-- Press Releases Section -->
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <h3>Press Releases</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5><a href="https://investors.coca-colacompany.com/">Coca-Cola Announces New Sustainability Initiatives</a></h5>
+                            <p>March 5, 2025 - Coca-Cola is excited to announce a series of new sustainability efforts aimed at reducing our environmental footprint.</p>
+                        </li>
+                        <li>
+                            <h5><a href="https://investors.coca-colacompany.com/">Coca-Cola Launches New Global Marketing Campaign</a></h5>
+                            <p>February 28, 2025 - The Coca-Cola Company unveils a new global campaign to reach a broader audience and increase engagement.</p>
+                        </li>
+                        <li>
+                            <h5><a href="https://investors.coca-colacompany.com/">Coca-Cola Expands Reach with New Beverage Partnerships</a></h5>
+                            <p>January 15, 2025 - Coca-Cola has partnered with several new beverage brands to broaden its portfolio and meet evolving consumer demands.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Media Coverage Section -->
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Media Coverage</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5><a href="https://investors.coca-colacompany.com/">Coca-Cola’s Efforts in Sustainability Featured in Forbes</a></h5>
+                            <p>March 2025 - Coca-Cola’s new sustainability programs and their positive impact on the environment have been featured in Forbes.</p>
+                        </li>
+                        <li>
+                            <h5><a href="https://investors.coca-colacompany.com/">The Coca-Cola Journey: A New Chapter in Global Branding</a></h5>
+                            <p>February 2025 - The Coca-Cola Company’s evolving brand strategy has been covered by Marketing Week.</p>
+                        </li>
+                        <li>
+                            <h5><a href="https://investors.coca-colacompany.com/">Coca-Cola’s Expansion into New Markets Covered by CNBC</a></h5>
+                            <p>January 2025 - Coca-Cola’s strategic moves into emerging markets were highlighted in a recent CNBC article.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Image and Video Gallery Section -->
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center" data-aos="fade-up">
+                    <h3>Here's the new Updates.</h3>
+                    <p>Explore Coca-Cola's latest photos and videos from events, campaigns, and more.</p>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="col-md-6 mb-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="./icons/event.png" class="card-img-top" alt="Event Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Coca-Cola Event Highlights</h5>
+                            <p class="card-text">A glimpse of Coca-Cola's recent promotional event featuring a variety of interactive activities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card">
+                        <img src="./icons/new.png" class="card-img-top" alt="Product Launch">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Launch</h5>
+                            <p class="card-text">Images from Coca-Cola’s latest product launch, showcasing new packaging and innovations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Gallery -->
+                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card">
+                        <video class="card-img-top" controls>
+                            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body">
+                            <h5 class="card-title">Coca-Cola Commercial</h5>
+                            <p class="card-text">Watch our latest global commercial showcasing Coca-Cola's unique brand experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card">
+                        <video class="card-img-top" controls>
+                            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body">
+                            <h5 class="card-title">Coca-Cola Behind the Scenes</h5>
+                            <p class="card-text">Take a behind-the-scenes look at how Coca-Cola creates its iconic advertisements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-danger text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Coca-Cola Company (Inspired for School Project)</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        AOS.init();
+
+        // Dark/Light Mode Switch
+        const toggleBtn = document.getElementById('toggleMode');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('bg-dark');
+            document.body.classList.toggle('text-white');
+            if (document.body.classList.contains('bg-dark')) {
+                toggleBtn.innerHTML = '<i class="bi bi-sun-fill me-1"></i> Light Mode';
+            } else {
+                toggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill me-1"></i> Dark Mode';
+            }
+        });
+
+        // Logout Toast and Redirect
+        function logoutToast() {
+            const toast = document.createElement('div');
+            toast.className = 'toast align-items-center text-white bg-success border-0 position-fixed top-0 end-0 m-3';
+            toast.role = 'alert';
+            toast.style.zIndex = '9999';
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Successfully logged out! Redirecting...
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            `;
+            document.body.appendChild(toast);
+
+            const bsToast = new bootstrap.Toast(toast, { delay: 2000 });
+            bsToast.show();
+
+            // After 2 seconds, redirect to login.html
+            setTimeout(() => {
+                window.location.href = 'index.html'; // <-- put your login page here
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

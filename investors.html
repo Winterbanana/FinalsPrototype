@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investors</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Chart.js for Graphs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+  <!-- HEADER -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="home.html">
+        <img src="./icons/cokeicon.png" alt="Logo" width="50" height="50" class="me-2">
+        Coca-Cola
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="home.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INVESTOR RELATIONS SECTION -->
+  <section id="investors" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-5">Coca-Cola Investor Relations</h2>
+      <div class="row g-4">
+        <!-- Stock Information -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Stock Information</h5>
+              <p class="card-text">Get the latest stock quotes, market performance, and historical data for Coca-Cola.</p>
+              <a href="https://investors.coca-colacompany.com/" class="btn btn-danger">View Stock Information</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Press Releases -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Press Releases</h5>
+              <p class="card-text">Access the latest press releases and news from Coca-Cola Company.</p>
+              <a href="https://investors.coca-colacompany.com/" class="btn btn-danger">View Press Releases</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Financial Reports -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Financial Reports</h5>
+              <p class="card-text">View Coca-Cola's quarterly and annual financial statements.</p>
+              <a href="https://investors.coca-colacompany.com/" class="btn btn-danger">View Reports</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STOCK PERFORMANCE GRAPH -->
+  <section id="stockPerformance" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-5">Stock Performance</h2>
+      <canvas id="stockChart"></canvas>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE SECTION -->
+  <section id="governance" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-5">Corporate Governance</h2>
+      <p class="lead">Coca-Cola's commitment to transparency, ethical business practices, and governance standards ensures that we meet the highest expectations of our investors, partners, and communities.</p>
+      <a href="https://investors.coca-colacompany.com/" class="btn btn-danger">Learn More About Our Governance</a>
+    </div>
+  </section>
+
+  <!-- SUSTAINABILITY SECTION -->
+  <section id="sustainability" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-5">Sustainability & Responsibility</h2>
+      <p class="lead">Coca-Cola is dedicated to making a positive impact on the environment, our communities, and society at large. Learn more about our sustainability efforts.</p>
+      <a href="https://investors.coca-colacompany.com/l" class="btn btn-danger">Explore Sustainability</a>
+    </div>
+  </section>
+
+  <!-- NEWS FEED SECTION -->
+  <section id="newsFeed" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Latest News</h2>
+      <div class="row">
+        <!-- News Article -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/300" class="card-img-top" alt="News Image">
+            <div class="card-body">
+              <h5 class="card-title">Coca-Cola Launches New Product</h5>
+              <p class="card-text">Learn more about Coca-Cola's newest product and what it means for the brand's future.</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- News Article -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/300" class="card-img-top" alt="News Image">
+            <div class="card-body">
+              <h5 class="card-title">Coca-Cola Expands Global Reach</h5>
+              <p class="card-text">Coca-Cola is expanding its presence in new international markets to increase growth.</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- News Article -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/300" class="card-img-top" alt="News Image">
+            <div class="card-body">
+              <h5 class="card-title">Coca-Cola's Sustainability Efforts</h5>
+              <p class="card-text">Learn about Coca-Cola's efforts to become more sustainable and reduce its environmental impact.</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-danger text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Coca-Cola Company.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Chart.js for Stock Performance Graph -->
+  <script>
+    var ctx = document.getElementById('stockChart').getContext('2d');
+    var stockChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'], // Replace with actual data
+        datasets: [{
+          label: 'Stock Price',
+          data: [100, 110, 120, 130, 125, 140], // Replace with actual stock data
+          borderColor: 'rgb(255, 99, 132)',
+          fill: false
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false,
+          },
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Months'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Stock Price'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Carousel */
+  .carousel-item {
+    height: 90vh;
+    background: #000;
+  }
+  
+  .carousel-item img {
+    height: 90vh;
+    object-fit: cover;
+    opacity: 0.85;
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Sections */
+  section {
+    scroll-margin-top: 70px;
+  }
+  
+  .navbar-brand img {
+    object-fit: contain;
+  }
+  

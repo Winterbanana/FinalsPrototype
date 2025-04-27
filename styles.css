@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(135deg, #e41c23, #ff7f50);
+  }
+  .card {
+    border: none;
+    border-radius: 15px;
+  }
+  #loginMessage {
+    font-weight: bold;
+  }
+  
